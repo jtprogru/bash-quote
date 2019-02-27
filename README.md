@@ -14,5 +14,4 @@ plugins=(git python3 aws bash-quote)
 ```
 ## Requirements
 
-Before using this plugin please install [HTTPie](https://httpie.org)
-
+Before using this plugin please install `iconv`, `curl`, `sed` and `grep`
