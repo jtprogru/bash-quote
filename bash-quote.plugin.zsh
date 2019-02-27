@@ -5,5 +5,14 @@ function bash-quote {
 
     TXT=$(echo "$Q" | grep "<div class=\"text\">" | head -n 1 | sed -e 's/<br>/\\n\\t/g' -e "s/<[^>]*>//g" -e "s/\&lt\;/</g" -e "s/\&gt\;/>/g" -e "s/\&quot\;/\"/g")
 
-    [[ -n "$TXT" ]] && print -P "%F{5}${TXT}%f"
+    if [[ ! -n "$TXT" ]]; then
+        echo "Error: unable to parse bash.im/random response."
+        exit 1
+    fi
+    
+    if [[ "$1" == "--color" ]]; then
+        print -P "%F{5}${TXT}%f"
+    else
+        echo "$TXT"
+    fi
 }
