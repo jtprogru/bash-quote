@@ -1,4 +1,4 @@
-# .oh-my-zsh Plugin for [Bash.im](https://bash.im/)
+# .oh-my-zsh Plugin for [bashorg.org](http://bashorg.org)
 
 ## Installation
 
